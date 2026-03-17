@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Loan Calculator Online | Calculate Monthly Payments Instantly</title>
-<meta name="description" content="Free online loan calculator. Calculate your monthly payment, interest, and total cost instantly. Simple and fast.">
-<meta name="keywords" content="loan calculator, monthly payment calculator, interest calculator, amortization">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Loan Calculator Online">
-<meta property="og:description" content="Calculate your loan payments instantly.">
-<meta property="og:type" content="website">
+<title>Loan Calculator | Reduce Your Debt</title>
+<meta name="description" content="Calculate your loan payments and learn how to reduce your debt and save money.">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -32,32 +29,23 @@ body { font-family: 'Inter', sans-serif; }
     </h1>
 
     <p class="text-center text-sm text-slate-500 mb-6">
-        Calculate your monthly loan payment instantly
+        Calculate your monthly payment and discover how much you're really paying
     </p>
 
     <!-- INPUTS -->
     <div class="space-y-4">
 
-        <div>
-            <label class="text-xs text-slate-500">Loan Amount ($)</label>
-            <input id="amount" type="number" placeholder="Example: 5000"
-            class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-        </div>
+        <input id="amount" type="number" placeholder="Loan Amount ($)"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
 
-        <div>
-            <label class="text-xs text-slate-500">Interest Rate (%)</label>
-            <input id="rate" type="number" placeholder="Example: 12"
-            class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-        </div>
+        <input id="rate" type="number" placeholder="Interest Rate (%)"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
 
-        <div>
-            <label class="text-xs text-slate-500">Loan Term (Months)</label>
-            <input id="months" type="number" placeholder="Example: 24"
-            class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
-        </div>
+        <input id="months" type="number" placeholder="Loan Term (Months)"
+        class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
 
         <button onclick="calculate()"
-        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition text-lg">
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl text-lg">
             Calculate Now
         </button>
 
@@ -88,18 +76,27 @@ body { font-family: 'Inter', sans-serif; }
 
         </div>
 
-        <!-- CTA -->
-        <a href="https://google.com" target="_blank"
-        class="block mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl shadow-lg transition text-lg">
-            🚀 Compare Loan Options
+        <!-- MENSAJE QUE CONVIERTE -->
+        <p class="text-red-500 text-sm mt-6">
+            ⚠️ You could be paying way too much in interest.
+        </p>
+
+        <p class="text-sm text-slate-600">
+            Learn how to eliminate your debt and save money with this proven system:
+        </p>
+
+        <!-- BOTÓN AFILIADO -->
+        <a href="https://go.hotmart.com/F104956395V" target="_blank"
+        class="block mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl text-lg shadow-lg">
+            🔥 Eliminate Your Debt (Cero Deudas)
         </a>
 
-    </div>
+        <!-- SEGUNDO BOTÓN -->
+        <a href="https://go.hotmart.com/L104956608C" target="_blank"
+        class="block mt-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl text-lg">
+            💰 Learn How to Save Thousands
+        </a>
 
-    <!-- SEO TEXTO -->
-    <div class="mt-8 text-xs text-slate-500 leading-relaxed">
-        This free loan calculator helps you estimate your monthly payments, total interest, and overall cost of a loan.
-        Whether you're planning a personal loan, car financing, or debt consolidation, understanding your payments is key.
     </div>
 
 </div>
@@ -137,14 +134,9 @@ function calculate() {
 
     document.getElementById("resultCard").classList.remove("hidden");
 
-    document.getElementById("monthlyPayment").innerText =
-        formatter.format(monthlyPayment);
-
-    document.getElementById("totalInterest").innerText =
-        formatter.format(totalInterest);
-
-    document.getElementById("totalPayback").innerText =
-        formatter.format(totalPayback);
+    document.getElementById("monthlyPayment").innerText = formatter.format(monthlyPayment);
+    document.getElementById("totalInterest").innerText = formatter.format(totalInterest);
+    document.getElementById("totalPayback").innerText = formatter.format(totalPayback);
 
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
